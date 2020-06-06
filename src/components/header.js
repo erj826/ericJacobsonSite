@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "@emotion/styled"
-
 import Typer from "../components/typer"
 
 const Wrapper = styled.div`
@@ -23,7 +22,7 @@ const MenuContainer = styled.div`
   display: block;
 `
 
-const Item = styled.a`
+const MenuItem = styled.a`
   display: inline-block;
   min-width: 220px;
   margin-left: 20px;
@@ -58,7 +57,7 @@ const Header = () => {
       <MenuContainer>
         <VerticalLine>
           {menuOptions.map(option => (
-            <Item>{option.content}</Item>
+            <MenuItem>{option.content}</MenuItem>
           ))}
         </VerticalLine>
       </MenuContainer>
