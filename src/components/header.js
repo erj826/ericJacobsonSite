@@ -26,9 +26,11 @@ const MenuItem = styled.a`
   display: inline-block;
   min-width: 220px;
   margin-left: 20px;
+  color: black;
+  text-decoration: none;
   &:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: black;
+    color: white;
   }
 `
 
@@ -41,9 +43,8 @@ const VerticalLine = styled.div`
 `
 
 const menuOptions = [
-  { content: "About me", href: "/" },
-  { content: "Experience", href: "/" },
-  { content: "Education", href: "/" },
+  { content: "About me", href: "#about" },
+  { content: "Experience", href: "#experience" },
   { content: "Tech", href: "/" },
   { content: "Contact", href: "/" },
 ]
@@ -57,7 +58,7 @@ const Header = () => {
       <MenuContainer>
         <VerticalLine>
           {menuOptions.map(option => (
-            <MenuItem>{option.content}</MenuItem>
+            <MenuItem href={option.href}>{option.content}</MenuItem>
           ))}
         </VerticalLine>
       </MenuContainer>

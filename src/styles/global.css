@@ -3,6 +3,11 @@
   src: url("../../static/fonts/typewriter/typewcond_regular.otf");
 }
 
+@font-face {
+  font-family: "Typewriter Demi";
+  src: url("../../static/fonts/typewriter/typewcond_demi.otf");
+}
+
 body {
   font-family: Typewriter Regular;
   background-color: white;
