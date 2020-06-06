@@ -1,9 +1,10 @@
 @font-face {
   font-family: "Typewriter Regular";
-  src: url("../../static/fonts/Typewriter/typewcond_regular.otf");
+  src: url("../../static/fonts/typewriter/typewcond_regular.otf");
 }
 
 body {
-	font-family: Typewriter Regular;
-	margin: 0;
+  font-family: Typewriter Regular;
+  background-color: white;
+  margin: 0;
 }

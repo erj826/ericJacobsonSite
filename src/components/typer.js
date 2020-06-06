@@ -8,7 +8,9 @@ class Typer extends Component {
       strings: strings,
       typeSpeed: 40,
       backSpeed: 40,
-      onComplete: self => { self.cursor.remove() },
+      onComplete: self => {
+        self.cursor.remove()
+      },
     }
     this.typed = new Typed(this.el, options)
   }
