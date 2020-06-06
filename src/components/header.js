@@ -45,7 +45,7 @@ const VerticalLine = styled.div`
 const menuOptions = [
   { content: "About me", href: "#about" },
   { content: "Experience", href: "#experience" },
-  { content: "Tech", href: "/" },
+  { content: "Tech", href: "#tech" },
   { content: "Contact", href: "/" },
 ]
 

@@ -3,7 +3,6 @@ import styled from "@emotion/styled"
 import Typer from "../components/typer"
 
 import wayfair from "../../static/images/wayfair.png"
-import bu from "../../static/images/bu.jpeg"
 import redhat from "../../static/images/redhat.png"
 import bose from "../../static/images/bose.png"
 
@@ -80,7 +79,9 @@ const Careers = [
 const Experience = () => {
   return (
     <Wrapper id="experience">
-      <TitleContainer>Experience</TitleContainer>
+      <TitleContainer>
+        <Typer strings={["Experience"]} />
+      </TitleContainer>
       {Careers.map(({ icon, company, role, dates, location, description }) => (
         <ItemContainer>
           <img src={icon} height="75px" width="75px" />

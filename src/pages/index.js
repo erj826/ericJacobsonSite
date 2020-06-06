@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import Header from "../components/header"
 import About from "../components/about"
 import Experience from "../components/experience"
+import Tech from "../components/tech"
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Header />
       <About />
       <Experience />
+      <Tech />
     </Fragment>
   )
 }
