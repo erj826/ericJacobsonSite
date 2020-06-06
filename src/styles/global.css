@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Typewriter Regular";
+  src: url("../../static/fonts/Typewriter/typewcond_regular.otf");
+}
+
+body {
+	font-family: Typewriter Regular;
+	margin: 0;
+}
