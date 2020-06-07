@@ -19,7 +19,7 @@ import python from "../../static/images/icons/python.png"
 import flask from "../../static/images/icons/flask.png"
 
 const Wrapper = styled.section`
-  height: calc(100vh - 25px); // Leave space for the footer
+  min-height: calc(100vh - 25px); // Leave space for the footer
   width: 100vw;
   position: relative;
 `
@@ -30,7 +30,7 @@ const TitleContainer = styled.div`
   align-self: start;
   text-align: center;
   margin-bottom: 40px;
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 540px) {
     font-size: 10vh;
   }
 `
@@ -85,13 +85,13 @@ const Technologies = [
 ]
 
 const Tech = () => {
-  const isDesktop = useMedia({ minWidth: 720 })
+  const isDesktop = useMedia({ minWidth: 540 })
   const imgDims = isDesktop
     ? { height: "75px", width: "auto" }
     : { height: "50px", width: "auto" }
   return (
     <Wrapper id="tech">
-      <TitleContainer>Favorite Tech</TitleContainer>
+      <TitleContainer>Skills</TitleContainer>
       <GridContainer>
         {Technologies.map(({ url, img, alt }) => (
           <ItemContainer href={url} target="_blank" rel="noreferrer">

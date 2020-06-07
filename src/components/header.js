@@ -2,9 +2,10 @@ import React from "react"
 import styled from "@emotion/styled"
 import Typer from "../components/typer"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import useMedia from "use-media"
 
 const Wrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: grid;
   grid-template-columns: 70vw 30vw;
@@ -15,6 +16,9 @@ const TitleContainer = styled.div`
   align-self: end;
   padding-bottom: 60px;
   padding-left: 40px;
+  @media only screen and (min-width: 600px) {
+    font-size: 10vh;
+  }
 `
 
 const MenuContainer = styled.div`
@@ -51,6 +55,8 @@ const menuOptions = [
 ]
 
 const Header = () => {
+  const isDesktop = useMedia({ minWidth: 540 })
+
   return (
     <Wrapper>
       <TitleContainer>

@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import img1 from "../../static/images/img1.jpeg"
 
 const Wrapper = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   position: relative;
   @media only screen and (min-width: 600px) {
