@@ -1,26 +1,34 @@
 import React from "react"
 import styled from "@emotion/styled"
+import useMedia from "use-media"
 import img1 from "../../static/images/img1.jpeg"
 
 const Wrapper = styled.section`
   min-height: 100vh;
   width: 100vw;
   position: relative;
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 540px) {
     display: grid;
     grid-template-columns: 50vw 50vw;
   }
 `
 
 const TitleContainer = styled.div`
-  font-size: 10vh;
+  font-size: 8vh;
   text-align: center;
+  @media only screen and (min-width: 540px) {
+    font-size: 10vh;
+  }
 `
 
 const ImageContainer = styled.div`
-  background-image: url(${img1});
-  height: 100vh;
+  background: url(${img1});
+  background-position: center;
   background-size: cover;
+  height: 40vh;
+  @media only screen and (min-width: 540px) {
+    height: 100vh;
+  }
 `
 
 const ParagraphContainer = styled.div`
@@ -36,9 +44,10 @@ const TextContainer = styled.div`
 `
 
 const About = () => {
+  const isDesktop = useMedia({ minWidth: 540 })
   return (
     <Wrapper id="about">
-      <ImageContainer />
+      {isDesktop && <ImageContainer />}
       <TextContainer>
         <TitleContainer>About me</TitleContainer>
         <ParagraphContainer>
@@ -51,6 +60,7 @@ const About = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </ParagraphContainer>
       </TextContainer>
+      {!isDesktop && <ImageContainer />}
     </Wrapper>
   )
 }

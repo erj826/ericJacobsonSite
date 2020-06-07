@@ -12,10 +12,13 @@ const Wrapper = styled.section`
 `
 
 const TitleContainer = styled.div`
-  font-size: 10vh;
+  font-size: 8vh;
   padding-top: 20px;
   align-self: start;
   text-align: center;
+  @media only screen and (min-width: 540px) {
+    font-size: 10vh;
+  }
 `
 
 const SubtitleContainer = styled.a`
