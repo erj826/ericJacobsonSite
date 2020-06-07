@@ -98,7 +98,7 @@ const Experience = () => {
     <Wrapper id="experience">
       <TitleContainer>Experience</TitleContainer>
       <SubtitleContainer download="" target="_blank" rel="noreferrer" href="/">
-        Resume (.pdf)
+        Resume.pdf
       </SubtitleContainer>
       {Careers.map(({ icon, company, role, dates, location, description }) => (
         <ItemContainer>

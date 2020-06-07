@@ -63,7 +63,11 @@ const Header = () => {
               {option.content}
             </MenuItem>
           ))}
-          <MenuItem href="https://github.com/erj826" target="_blank" rel="noreferrer">
+          <MenuItem
+            href="https://github.com/erj826"
+            target="_blank"
+            rel="noreferrer"
+          >
             Github
           </MenuItem>
         </VerticalLine>

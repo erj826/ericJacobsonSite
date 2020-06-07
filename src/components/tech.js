@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import useMedia from "use-media"
 
 import react from "../../static/images/icons/react.png"
 import datadog from "../../static/images/icons/datadog.png"
@@ -22,51 +23,74 @@ const Wrapper = styled.section`
 `
 
 const TitleContainer = styled.div`
-  font-size: 10vh;
+  font-size: 8vh;
   padding-top: 20px;
   align-self: start;
   text-align: center;
   margin-bottom: 40px;
+  @media only screen and (min-width: 600px) {
+    font-size: 10vh;
+  }
 `
 
-const GridWrap = styled.div`
+const GridContainer = styled.div`
   display: grid;
   max-width: 70vw;
   margin: auto;
-  grid-row-gap: 30px;
-  justify-items: center;
-  grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+  grid-template-columns: auto auto auto;
+  @media only screen and (min-width: 720px) {
+    grid-template-columns: auto auto auto auto;
+  }
+  @media only screen and (min-width: 960px) {
+    grid-template-columns: auto auto auto auto auto;
+  }
+`
+
+const ItemContainer = styled.a`
+  padding: 15px;
+  display: flex;
+  justify-content: center;
 `
 
 const Technologies = [
-  { url: "https://reactjs.org/", img: react, alt: "React JS"},
+  { url: "https://reactjs.org/", img: react, alt: "React JS" },
   { url: "https://www.php.net/", img: php, alt: "PHP" },
   { url: "https://www.typescriptlang.org/", img: ts, alt: "TypeScript" },
   { url: "https://www.gatsbyjs.org/", img: gatsby, alt: "Gatsby JS" },
   { url: "https://sass-lang.com/", img: sass, alt: "SASS" },
   { url: "https://grafana.com/", img: grafana, alt: "Grafana" },
-  { url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", img: js, alt: "JavaScript" },
+  {
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    img: js,
+    alt: "JavaScript",
+  },
   { url: "https://www.elastic.co/kibana", img: kibana, alt: "Kibana" },
   { url: "https://graphql.org/", img: gql, alt: "GraphQL" },
   { url: "https://git-scm.com/", img: git, alt: "Git" },
-  { url: null, img: null, alt: null},
   { url: "https://webpack.js.org/", img: webpack, alt: "Webpack" },
-  { url: "https://azure.microsoft.com/en-us/services/sql-database/", img: sql, alt: "SQL" },
+  {
+    url: "https://azure.microsoft.com/en-us/services/sql-database/",
+    img: sql,
+    alt: "SQL",
+  },
   { url: "https://www.datadoghq.com/", img: datadog, alt: "Datadog" },
-  { url: null, img: null },
 ]
 
 const Tech = () => {
+  const isDesktop = useMedia({ minWidth: 720 })
+  const imgDims = isDesktop
+    ? { height: "75px", width: "auto" }
+    : { height: "50px", width: "auto" }
   return (
     <Wrapper id="tech">
       <TitleContainer>Current Tech</TitleContainer>
-      <GridWrap>
+      <GridContainer>
         {Technologies.map(({ url, img, alt }) => (
-          <a href={url} target="_blank" rel="noreferrer">
-            <img src={img} alt={alt} height="75px" width="auto" />
-          </a>
+          <ItemContainer href={url} target="_blank" rel="noreferrer">
+            <img src={img} alt={alt} {...imgDims} />
+          </ItemContainer>
         ))}
-      </GridWrap>
+      </GridContainer>
     </Wrapper>
   )
 }

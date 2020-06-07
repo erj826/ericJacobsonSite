@@ -22,7 +22,8 @@
     "gatsby-plugin-smoothscroll": "^1.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "typed.js": "^2.0.11"
+    "typed.js": "^2.0.11",
+    "use-media": "^1.4.0"
   },
   "devDependencies": {
     "prettier": "2.0.5"
