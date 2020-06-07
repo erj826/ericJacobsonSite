@@ -15,6 +15,8 @@ import js from "../../static/images/icons/js.png"
 import ts from "../../static/images/icons/ts.png"
 import php from "../../static/images/icons/php.png"
 import webpack from "../../static/images/icons/webpack.png"
+import python from "../../static/images/icons/python.png"
+import flask from "../../static/images/icons/flask.png"
 
 const Wrapper = styled.section`
   height: calc(100vh - 25px); // Leave space for the footer
@@ -74,6 +76,12 @@ const Technologies = [
     alt: "SQL",
   },
   { url: "https://www.datadoghq.com/", img: datadog, alt: "Datadog" },
+  { url: "https://www.python.org/", img: python, alt: "Python" },
+  {
+    url: "https://flask.palletsprojects.com/en/1.1.x/",
+    img: flask,
+    alt: "Flask",
+  },
 ]
 
 const Tech = () => {
@@ -83,7 +91,7 @@ const Tech = () => {
     : { height: "50px", width: "auto" }
   return (
     <Wrapper id="tech">
-      <TitleContainer>Current Tech</TitleContainer>
+      <TitleContainer>Favorite Tech</TitleContainer>
       <GridContainer>
         {Technologies.map(({ url, img, alt }) => (
           <ItemContainer href={url} target="_blank" rel="noreferrer">
