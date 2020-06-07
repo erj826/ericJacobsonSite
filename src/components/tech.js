@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "@emotion/styled"
-import Typer from "../components/typer"
 
 import react from "../../static/images/icons/react.png"
 import datadog from "../../static/images/icons/datadog.png"
@@ -15,11 +14,9 @@ import js from "../../static/images/icons/js.png"
 import ts from "../../static/images/icons/ts.png"
 import php from "../../static/images/icons/php.png"
 import webpack from "../../static/images/icons/webpack.png"
-import python from "../../static/images/icons/python.png"
-import java from "../../static/images/icons/java.png"
 
 const Wrapper = styled.section`
-  height: 100vh;
+  height: calc(100vh - 25px); // Leave space for the footer
   width: 100vw;
   position: relative;
 `
@@ -52,11 +49,11 @@ const Technologies = [
   { url: "https://www.elastic.co/kibana", img: kibana },
   { url: "https://graphql.org/", img: gql },
   { url: "https://git-scm.com/", img: git },
+  { url: null, img: null },
   { url: "https://webpack.js.org/", img: webpack },
   { url: "https://azure.microsoft.com/en-us/services/sql-database/", img: sql },
   { url: "https://www.datadoghq.com/", img: datadog },
-  { url: "https://www.python.org/", img: python },
-  { url: "https://www.java.com/en/", img: java },
+  { url: null, img: null },
 ]
 
 const Tech = () => {

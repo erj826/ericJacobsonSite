@@ -9,6 +9,7 @@ import bose from "../../static/images/bose.png"
 const Wrapper = styled.section`
   height: 100vh;
   width: 100vw;
+  min-width: 780px;
   position: relative;
 `
 
@@ -19,13 +20,30 @@ const TitleContainer = styled.div`
   text-align: center;
 `
 
+const SubtitleContainer = styled.a`
+  font-size: 4vh;
+  display: flex;
+  justify-content: center;
+  color: #575757;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
 const ItemContainer = styled.div`
   font-family: "Typewriter Demi";
   display: flex;
   flex-direction: row;
   padding: 10px;
-  max-width: 70vw;
+  max-width: 95vw;
   margin: auto;
+  @media only screen and (min-width: 900px) {
+    max-width: 90vw;
+  }
+  @media only screen and (min-width: 1020px) {
+    max-width: 70vw;
+  }
 `
 
 const TextContainer = styled.div`
@@ -54,7 +72,8 @@ const Careers = [
     role: "Software Engineer",
     dates: "Jul 2019 - Present",
     location: "Boston, MA",
-    description: "",
+    description:
+      "Full stack developer on the Hot Deals and Gateway team where we engineer the landing page for our paid advertising as well as build our email acquisition points for all Wayfair geographies and brands.",
   },
   {
     icon: redhat,
@@ -80,6 +99,9 @@ const Experience = () => {
   return (
     <Wrapper id="experience">
       <TitleContainer>Experience</TitleContainer>
+      <SubtitleContainer download="" target="_blank" href="/">
+        download my resume
+      </SubtitleContainer>
       {Careers.map(({ icon, company, role, dates, location, description }) => (
         <ItemContainer>
           <img src={icon} height="75px" width="75px" />

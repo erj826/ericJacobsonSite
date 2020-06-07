@@ -48,7 +48,6 @@ const menuOptions = [
   { content: "About me", section: "#about" },
   { content: "Experience", section: "#experience" },
   { content: "Tech", section: "#tech" },
-  { content: "Contact", section: "#" },
 ]
 
 const Header = () => {
@@ -64,6 +63,9 @@ const Header = () => {
               {option.content}
             </MenuItem>
           ))}
+          <MenuItem href="https://github.com/erj826" target="_blank">
+            Github
+          </MenuItem>
         </VerticalLine>
       </MenuContainer>
     </Wrapper>

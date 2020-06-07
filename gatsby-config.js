@@ -1,3 +1,7 @@
 module.exports = {
-  plugins: [`gatsby-plugin-emotion`, `gatsby-plugin-smoothscroll`],
+  plugins: [
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-netlify`,
+  ],
 }

@@ -6,8 +6,8 @@ class Typer extends Component {
     const { strings } = this.props
     const options = {
       strings: strings,
-      typeSpeed: 30,
-      backSpeed: 30,
+      typeSpeed: 25,
+      backSpeed: 25,
       onComplete: self => {
         self.cursor.remove()
       },

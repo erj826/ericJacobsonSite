@@ -2,7 +2,6 @@ import React from "react"
 import styled from "@emotion/styled"
 import Typer from "../components/typer"
 import img1 from "../../static/images/img1.jpeg"
-import { useInView } from "react-intersection-observer"
 
 const Wrapper = styled.section`
   height: 100vh;
