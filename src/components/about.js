@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import Typer from "../components/typer"
 import img1 from "../../static/images/img1.jpeg"
+import { useInView } from "react-intersection-observer"
 
 const Wrapper = styled.section`
   height: 100vh;
@@ -34,9 +35,7 @@ const About = () => {
     <Wrapper id="about">
       <ImageContainer />
       <div>
-        <TitleContainer>
-          <Typer strings={["About me"]} />
-        </TitleContainer>
+        <TitleContainer>About me</TitleContainer>
         <ParagraphContainer>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

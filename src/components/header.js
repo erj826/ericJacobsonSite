@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Typer from "../components/typer"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -23,6 +24,7 @@ const MenuContainer = styled.div`
 `
 
 const MenuItem = styled.a`
+  cursor: pointer;
   display: inline-block;
   min-width: 220px;
   margin-left: 20px;
@@ -43,10 +45,10 @@ const VerticalLine = styled.div`
 `
 
 const menuOptions = [
-  { content: "About me", href: "#about" },
-  { content: "Experience", href: "#experience" },
-  { content: "Tech", href: "#tech" },
-  { content: "Contact", href: "/" },
+  { content: "About me", section: "#about" },
+  { content: "Experience", section: "#experience" },
+  { content: "Tech", section: "#tech" },
+  { content: "Contact", section: "#" },
 ]
 
 const Header = () => {
@@ -58,7 +60,9 @@ const Header = () => {
       <MenuContainer>
         <VerticalLine>
           {menuOptions.map(option => (
-            <MenuItem href={option.href}>{option.content}</MenuItem>
+            <MenuItem onClick={() => scrollTo(option.section)}>
+              {option.content}
+            </MenuItem>
           ))}
         </VerticalLine>
       </MenuContainer>

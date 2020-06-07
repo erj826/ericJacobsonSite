@@ -79,9 +79,7 @@ const Careers = [
 const Experience = () => {
   return (
     <Wrapper id="experience">
-      <TitleContainer>
-        <Typer strings={["Experience"]} />
-      </TitleContainer>
+      <TitleContainer>Experience</TitleContainer>
       {Careers.map(({ icon, company, role, dates, location, description }) => (
         <ItemContainer>
           <img src={icon} height="75px" width="75px" />
