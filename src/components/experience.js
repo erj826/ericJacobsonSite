@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "@emotion/styled"
-import Typer from "../components/typer"
 
 import wayfair from "../../static/images/wayfair.png"
 import redhat from "../../static/images/redhat.png"
@@ -9,7 +8,6 @@ import bose from "../../static/images/bose.png"
 const Wrapper = styled.section`
   height: 100vh;
   width: 100vw;
-  min-width: 780px;
   position: relative;
 `
 
@@ -99,12 +97,12 @@ const Experience = () => {
   return (
     <Wrapper id="experience">
       <TitleContainer>Experience</TitleContainer>
-      <SubtitleContainer download="" target="_blank" href="/">
-        download my resume
+      <SubtitleContainer download="" target="_blank" rel="noreferrer" href="/">
+        Resume (.pdf)
       </SubtitleContainer>
       {Careers.map(({ icon, company, role, dates, location, description }) => (
         <ItemContainer>
-          <img src={icon} height="75px" width="75px" />
+          <img src={icon} alt={company} height="75px" width="75px" />
           <TextContainer>
             <ItemTitle>
               {role}, {company}

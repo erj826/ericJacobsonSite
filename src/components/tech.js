@@ -39,20 +39,20 @@ const GridWrap = styled.div`
 `
 
 const Technologies = [
-  { url: "https://reactjs.org/", img: react },
-  { url: "https://www.php.net/", img: php },
-  { url: "https://www.typescriptlang.org/", img: ts },
-  { url: "https://www.gatsbyjs.org/", img: gatsby },
-  { url: "https://sass-lang.com/", img: sass },
-  { url: "https://grafana.com/", img: grafana },
-  { url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", img: js },
-  { url: "https://www.elastic.co/kibana", img: kibana },
-  { url: "https://graphql.org/", img: gql },
-  { url: "https://git-scm.com/", img: git },
-  { url: null, img: null },
-  { url: "https://webpack.js.org/", img: webpack },
-  { url: "https://azure.microsoft.com/en-us/services/sql-database/", img: sql },
-  { url: "https://www.datadoghq.com/", img: datadog },
+  { url: "https://reactjs.org/", img: react, alt: "React JS"},
+  { url: "https://www.php.net/", img: php, alt: "PHP" },
+  { url: "https://www.typescriptlang.org/", img: ts, alt: "TypeScript" },
+  { url: "https://www.gatsbyjs.org/", img: gatsby, alt: "Gatsby JS" },
+  { url: "https://sass-lang.com/", img: sass, alt: "SASS" },
+  { url: "https://grafana.com/", img: grafana, alt: "Grafana" },
+  { url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", img: js, alt: "JavaScript" },
+  { url: "https://www.elastic.co/kibana", img: kibana, alt: "Kibana" },
+  { url: "https://graphql.org/", img: gql, alt: "GraphQL" },
+  { url: "https://git-scm.com/", img: git, alt: "Git" },
+  { url: null, img: null, alt: null},
+  { url: "https://webpack.js.org/", img: webpack, alt: "Webpack" },
+  { url: "https://azure.microsoft.com/en-us/services/sql-database/", img: sql, alt: "SQL" },
+  { url: "https://www.datadoghq.com/", img: datadog, alt: "Datadog" },
   { url: null, img: null },
 ]
 
@@ -61,9 +61,9 @@ const Tech = () => {
     <Wrapper id="tech">
       <TitleContainer>Current Tech</TitleContainer>
       <GridWrap>
-        {Technologies.map(({ url, img }) => (
-          <a href={url}>
-            <img src={img} height="75px" width="auto" />
+        {Technologies.map(({ url, img, alt }) => (
+          <a href={url} target="_blank" rel="noreferrer">
+            <img src={img} alt={alt} height="75px" width="auto" />
           </a>
         ))}
       </GridWrap>

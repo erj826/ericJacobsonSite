@@ -1,20 +1,19 @@
 import React from "react"
 import styled from "@emotion/styled"
-import Typer from "../components/typer"
 import img1 from "../../static/images/img1.jpeg"
 
 const Wrapper = styled.section`
   height: 100vh;
   width: 100vw;
-  display: grid;
-  grid-template-columns: 50vw 50vw;
   position: relative;
+  @media only screen and (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+  }
 `
 
 const TitleContainer = styled.div`
   font-size: 10vh;
-  padding-top: 16vh;
-  align-self: start;
   text-align: center;
 `
 
@@ -26,14 +25,21 @@ const ImageContainer = styled.div`
 
 const ParagraphContainer = styled.div`
   font-size: 1.3rem;
-  padding: 36px;
+  padding: 12px 36px 36px;
+`
+
+const TextContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `
 
 const About = () => {
   return (
     <Wrapper id="about">
       <ImageContainer />
-      <div>
+      <TextContainer>
         <TitleContainer>About me</TitleContainer>
         <ParagraphContainer>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -44,7 +50,7 @@ const About = () => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </ParagraphContainer>
-      </div>
+      </TextContainer>
     </Wrapper>
   )
 }
