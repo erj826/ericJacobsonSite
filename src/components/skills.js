@@ -37,9 +37,12 @@ const TitleContainer = styled.div`
 
 const GridContainer = styled.div`
   display: grid;
-  max-width: 70vw;
+  max-width: 100vw;
   margin: auto;
   grid-template-columns: auto auto auto;
+  @media only screen and (min-width: 540px) {
+    max-width: 70vw;
+  }
   @media only screen and (min-width: 720px) {
     grid-template-columns: auto auto auto auto;
   }
@@ -54,7 +57,7 @@ const ItemContainer = styled.a`
   justify-content: center;
 `
 
-const Technologies = [
+const Tech = [
   { url: "https://reactjs.org/", img: react, alt: "React JS" },
   { url: "https://www.php.net/", img: php, alt: "PHP" },
   { url: "https://www.typescriptlang.org/", img: ts, alt: "TypeScript" },
@@ -84,16 +87,16 @@ const Technologies = [
   },
 ]
 
-const Tech = () => {
+const Skills = () => {
   const isDesktop = useMedia({ minWidth: 540 })
   const imgDims = isDesktop
     ? { height: "75px", width: "auto" }
     : { height: "50px", width: "auto" }
   return (
-    <Wrapper id="tech">
+    <Wrapper id="skills">
       <TitleContainer>Skills</TitleContainer>
       <GridContainer>
-        {Technologies.map(({ url, img, alt }) => (
+        {Tech.map(({ url, img, alt }) => (
           <ItemContainer href={url} target="_blank" rel="noreferrer">
             <img src={img} alt={alt} {...imgDims} />
           </ItemContainer>
@@ -103,4 +106,4 @@ const Tech = () => {
   )
 }
 
-export default Tech
+export default Skills

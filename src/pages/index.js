@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import Header from "../components/header"
 import About from "../components/about"
 import Experience from "../components/experience"
-import Tech from "../components/tech"
+import Skills from "../components/skills"
 import Footer from "../components/footer"
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       <Header />
       <About />
       <Experience />
-      <Tech />
+      <Skills />
       <Footer />
     </Fragment>
   )
