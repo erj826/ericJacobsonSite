@@ -51,13 +51,14 @@ const About = () => {
       <TextContainer>
         <TitleContainer>About me</TitleContainer>
         <ParagraphContainer>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Hey! I'm Eric. I began my coding journey back in high school and got
+          my B.A. in Computer Science from Boston University. My attraction to
+          computer science and software is driven by my determination to solve
+          problems. I'm always excited to take on a new challenge and learn how
+          to use the newest and greatest tech. Outside of work I love to travel
+          and be outside. My favorite place that I've been is Denmark where I
+          was an exchange student at the University of Copenhagen for a
+          semester.
         </ParagraphContainer>
       </TextContainer>
       {!isDesktop && <ImageContainer />}

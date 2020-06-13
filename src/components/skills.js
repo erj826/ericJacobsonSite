@@ -15,8 +15,8 @@ import js from "../../static/images/icons/js.png"
 import ts from "../../static/images/icons/ts.png"
 import php from "../../static/images/icons/php.png"
 import webpack from "../../static/images/icons/webpack.png"
-import python from "../../static/images/icons/python.png"
-import flask from "../../static/images/icons/flask.png"
+import jest from "../../static/images/icons/jest.png"
+import rtl from "../../static/images/icons/rtl.png"
 
 const Wrapper = styled.section`
   min-height: calc(100vh - 25px); // Leave space for the footer
@@ -79,11 +79,11 @@ const Tech = [
     alt: "SQL",
   },
   { url: "https://www.datadoghq.com/", img: datadog, alt: "Datadog" },
-  { url: "https://www.python.org/", img: python, alt: "Python" },
+  { url: "https://jestjs.io/", img: jest, alt: "Jest" },
   {
-    url: "https://flask.palletsprojects.com/en/1.1.x/",
-    img: flask,
-    alt: "Flask",
+    url: "https://github.com/testing-library/react-testing-library",
+    img: rtl,
+    alt: "React Testing Library",
   },
 ]
 
@@ -96,8 +96,13 @@ const Skills = () => {
     <Wrapper id="skills">
       <TitleContainer>Skills</TitleContainer>
       <GridContainer>
-        {Tech.map(({ url, img, alt }) => (
-          <ItemContainer href={url} target="_blank" rel="noreferrer">
+        {Tech.map(({ url, img, alt }, index) => (
+          <ItemContainer
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            key={index}
+          >
             <img src={img} alt={alt} {...imgDims} />
           </ItemContainer>
         ))}

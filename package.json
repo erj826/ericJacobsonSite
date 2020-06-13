@@ -19,9 +19,12 @@
     "gatsby": "^2.22.15",
     "gatsby-plugin-emotion": "^4.3.3",
     "gatsby-plugin-netlify": "^2.3.4",
+    "gatsby-plugin-offline": "^3.2.9",
+    "gatsby-plugin-react-helmet": "^3.3.4",
     "gatsby-plugin-smoothscroll": "^1.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
     "typed.js": "^2.0.11",
     "use-media": "^1.4.0"
   },

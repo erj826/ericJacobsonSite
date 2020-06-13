@@ -79,19 +79,19 @@ const Header = () => {
   return (
     <Wrapper>
       <TitleContainer>
-        {isDesktop && <Typer strings={["Eric Jacobson^600"]} />}
+        {isDesktop && <Typer strings={["Eric Jacobson^800"]} />}
         {!isDesktop && (
           <Fragment>
             <Typer strings={["Eric"]} />
             <br />
-            <Typer strings={["^600Jacobson^600"]} />
+            <Typer strings={["^800Jacobson^800"]} />
           </Fragment>
         )}
       </TitleContainer>
       <MenuContainer>
         <VerticalLine>
-          {menuOptions.map(option => (
-            <MenuItem onClick={() => scrollTo(option.section)}>
+          {menuOptions.map((option, index) => (
+            <MenuItem onClick={() => scrollTo(option.section)} key={index}>
               {option.content}
             </MenuItem>
           ))}

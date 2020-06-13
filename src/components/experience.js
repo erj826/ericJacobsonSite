@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 
+import Resume from "../../static/documents/EricJacobsonResume.pdf"
 import wayfair from "../../static/images/wayfair.png"
 import redhat from "../../static/images/redhat.png"
 import bose from "../../static/images/bose.png"
@@ -74,7 +75,7 @@ const Careers = [
     dates: "Jul 2019 - Present",
     location: "Boston, MA",
     description:
-      "Full stack developer on the Hot Deals and Gateway team where we engineer the landing page for our paid advertising as well as build our email acquisition points for all Wayfair geographies and brands.",
+      "Full stack developer on the Hot Deals and Gateway team where we engineer the landing page for Wayfair's paid advertising as well as build the email acquisition points for all Wayfair geographies and brands. Team Stability Captain where responsibilities include building out dashboards and alerting systems to keep our pages reliable and available.",
   },
   {
     icon: redhat,
@@ -100,23 +101,30 @@ const Experience = () => {
   return (
     <Wrapper id="experience">
       <TitleContainer>Experience</TitleContainer>
-      <SubtitleContainer download="" target="_blank" rel="noreferrer" href="/">
+      <SubtitleContainer
+        download={Resume}
+        target="_blank"
+        rel="noreferrer"
+        href="/"
+      >
         Resume.pdf
       </SubtitleContainer>
-      {Careers.map(({ icon, company, role, dates, location, description }) => (
-        <ItemContainer>
-          <img src={icon} alt={company} height="75px" width="75px" />
-          <TextContainer>
-            <ItemTitle>
-              {role}, {company}
-            </ItemTitle>
-            <ItemSubtitle>
-              {dates}, {location}
-            </ItemSubtitle>
-            <Description>{description}</Description>
-          </TextContainer>
-        </ItemContainer>
-      ))}
+      {Careers.map(
+        ({ icon, company, role, dates, location, description }, index) => (
+          <ItemContainer key={index}>
+            <img src={icon} alt={company} height="75px" width="75px" />
+            <TextContainer>
+              <ItemTitle>
+                {role}, {company}
+              </ItemTitle>
+              <ItemSubtitle>
+                {dates}, {location}
+              </ItemSubtitle>
+              <Description>{description}</Description>
+            </TextContainer>
+          </ItemContainer>
+        )
+      )}
     </Wrapper>
   )
 }
