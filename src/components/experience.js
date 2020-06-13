@@ -34,7 +34,6 @@ const SubtitleContainer = styled.a`
 `
 
 const ItemContainer = styled.div`
-  font-family: "Typewriter Demi";
   display: flex;
   flex-direction: row;
   padding: 10px;
