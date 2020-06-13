@@ -53,12 +53,12 @@ const About = () => {
         <ParagraphContainer>
           Hey! I'm Eric. I began my coding journey back in high school and got
           my B.A. in Computer Science from Boston University. My attraction to
-          computer science and software is driven by my determination to solve
-          problems. I'm always excited to take on a new challenge and learn how
-          to use the newest and greatest tech. Outside of work I love to travel
-          and be outside. My favorite place that I've been is Denmark where I
-          was an exchange student at the University of Copenhagen for a
-          semester.
+          computer science and programming is driven by my determination to
+          solve problems. I'm always excited to take on a new challenge and
+          learn how to use the newest and greatest tech. Outside of work I love
+          to travel and spend time outside. My favorite country is Denmark where
+          I spent a semester as an exchange student at the University of
+          Copenhagen.
         </ParagraphContainer>
       </TextContainer>
       {!isDesktop && <ImageContainer />}
