@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import EricJacobsonResume from "../documents/EricJacobsonResume.pdf"
+import EricJacobsonResume from "../../static/documents/EricJacobsonResume.pdf"
 import wayfair from "../../static/images/wayfair.png"
 import redhat from "../../static/images/redhat.png"
 import bose from "../../static/images/bose.png"
