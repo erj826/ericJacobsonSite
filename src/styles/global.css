@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Typewriter Demi";
-  src: url("fonts/typewriter/typewcond_demi.otf");
+  src: url("../../static/fonts/typewriter/typewcond_demi.otf");
 }
 
 body {
