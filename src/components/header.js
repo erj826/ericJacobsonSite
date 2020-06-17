@@ -44,7 +44,7 @@ const MenuItem = styled.a`
   @media only screen and (min-width: 540px) {
     color: black;
     background-color: white;
-    min-width: 220px;
+    min-width: 270px;
     margin-left: 20px;
     margin-bottom: 0;
     &:hover {
